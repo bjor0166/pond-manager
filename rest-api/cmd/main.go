@@ -7,7 +7,8 @@ import (
 	"net/http"
 	"github.com/gorilla/mux"
 
-	"pond-manager/constants"
+	"pond-manager/rest-api/constants"
+	"pond-manager/rest-api/router"
 )
 
 // type Pond struct {
@@ -25,7 +26,9 @@ import (
 func main () {
 	//ponds = append(ponds, Pond{ID: "1", Name: "Lilly Pond"})
 	
-	router := mux.NewRouter()
+	appRouter := router.CreateRouter()
+
+	//router := mux.NewRouter()
 	//router.HandleFunc("/ponds", GetPonds).Methods("GET")
-	log.Fatal(http.ListenAndServe(":"+constants.Port, router))
+	log.Fatal(http.ListenAndServe(":"+constants.Port, appRouter))
 }

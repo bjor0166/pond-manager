@@ -3,8 +3,8 @@ package router
 import (
 	"github.com/gorilla/mux"
 
-	"github.com/bjor0166/controller"
-	"github.com/bjor0166/types"
+	"pond-manager/rest-api/controller"
+	"pond-manager/rest-api/types"
 )
 
 var Routes = []types.Route{
