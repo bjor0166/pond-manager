@@ -31,6 +31,7 @@ func main () {
 		fmt.Println(err)
 	}
 
+
 	// Check the connection
 	err = client.Ping(context.TODO(), nil)
 
