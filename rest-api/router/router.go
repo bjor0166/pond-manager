@@ -3,13 +3,12 @@ package router
 import (
 	"github.com/gorilla/mux"
 
-	"github.com/bjor0166/controller"
-	"github.com/bjor0166/types"
+	"pond-manager/rest-api/controller"
+	"pond-manager/rest-api/types"
 )
 
 var Routes = []types.Route{
-	router.HandleFunc("/ponds", GetPonds).Methods("GET")
-	{"GET","/ponds",controller.Ponds,"ponds"}
+	{"GET","/ponds",controller.GetPonds,"ponds"},
 }
 
 //CreateRouter creates a new router
