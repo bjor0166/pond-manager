@@ -8,8 +8,7 @@ import (
 )
 
 var Routes = []types.Route{
-	router.HandleFunc("/ponds", GetPonds).Methods("GET")
-	{"GET","/ponds",controller.Ponds,"ponds"}
+	{"GET","/ponds",controller.GetPonds,"ponds"},
 }
 
 //CreateRouter creates a new router
