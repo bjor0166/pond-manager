@@ -1,0 +1,6 @@
+.DS_Store
+.idea
+.vscode
+migrate/bindata.go
+main
+vendor

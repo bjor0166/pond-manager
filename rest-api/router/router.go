@@ -7,11 +7,14 @@ import (
 	"pond-manager/rest-api/types"
 )
 
+// Routes defines the routes of the API
 var Routes = []types.Route{
-	{"GET","/ponds",controller.GetPonds,"ponds"},
+	{"GET","/allponds",controller.AllPonds,"allponds"},
+	{"GET","/findpond",controller.PondLookup,"findpond"},
+	{"DELETE","/deleteall", controller.DeleteAll,"deleteall"},
 }
 
-//CreateRouter creates a new router
+//CreateRouter creates a new router with all of the routes in Routes
 func CreateRouter () *mux.Router {
 	router := mux.NewRouter().StrictSlash(true)
 	for _, route := range Routes {
