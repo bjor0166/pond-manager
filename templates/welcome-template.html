@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/css/welcome-template.css">
+        <link rel="shortcut icon" type="image/png" href="/water-favicon.png"/>
+        <!--The welcome struct (shown in the main.go code) is received within the HTML and we just need to use the . operator and retrieve the information we want-->
+        <title>Welcome</title></title>
+    </head>
+
+    <body>
+        <div class="welcome center">Welcome to Golden Pond, {{.Time}} {{.Name}}</div>
+        
+        <h1 class="data-entry">Find your pond</h1>
+        <form>
+            <input name="new-pond" type="text" id="enter-area">
+            <input type="submit" value="Submit">
+        </form>
+
+        <script src="/public/main.js"></script>
+    </body>
+</html>
